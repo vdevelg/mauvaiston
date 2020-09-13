@@ -1,0 +1,236 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MOVETON-rescue:LM334M-Reference_Current U?
+U 1 1 5E9805EF
+P 5200 1500
+F 0 "U?" H 5080 1546 50  0000 R CNN
+F 1 "LM334M" H 5080 1455 50  0000 R CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5225 1350 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm134.pdf" H 5200 1500 50  0001 C CIN
+	1    5200 1500
+	0    -1   1    0   
+$EndComp
+$Comp
+L MOVETON-rescue:LM285D-1.2-Reference_Voltage U?
+U 1 1 5E987B99
+P 5650 1500
+F 0 "U?" V 5696 1413 50  0000 R CNN
+F 1 "LT1004-1.2" V 5605 1413 50  0000 R CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5650 1300 50  0001 C CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/LM285-D.PDF" H 5650 1500 50  0001 C CIN
+	1    5650 1500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2150 5450 2150
+Wire Wire Line
+	5450 2150 5450 2000
+Wire Wire Line
+	5800 2150 5850 2150
+Wire Wire Line
+	5850 2150 5850 1500
+Wire Wire Line
+	5850 1500 5800 1500
+Wire Wire Line
+	5400 1500 5450 1500
+Wire Wire Line
+	5450 1700 5450 1500
+Connection ~ 5450 1500
+Wire Wire Line
+	5450 1500 5500 1500
+Wire Wire Line
+	5450 2150 5200 2150
+Wire Wire Line
+	5200 2150 5200 1700
+Connection ~ 5450 2150
+$Comp
+L MOVETON-rescue:R-Device R?
+U 1 1 5E98DC80
+P 5450 1850
+F 0 "R?" V 5243 1850 50  0000 C CNN
+F 1 "6.8k" V 5334 1850 50  0000 C CNN
+F 2 "" V 5380 1850 50  0001 C CNN
+F 3 "~" H 5450 1850 50  0001 C CNN
+	1    5450 1850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5850 1500 6050 1500
+Connection ~ 5850 1500
+$Comp
+L MOVETON-rescue:ESP-12E-RF_Module U?
+U 1 1 5E99129A
+P 3500 2350
+F 0 "U?" H 3500 3331 50  0000 C CNN
+F 1 "ESP-12E" H 3500 3240 50  0000 C CNN
+F 2 "RF_Module:ESP-12E" H 3500 2350 50  0001 C CNN
+F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 3150 2450 50  0001 C CNN
+	1    3500 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 5E995731
+P 1500 1450
+F 0 "#PWR?" H 1500 1300 50  0001 C CNN
+F 1 "+BATT" H 1515 1623 50  0000 C CNN
+F 2 "" H 1500 1450 50  0001 C CNN
+F 3 "" H 1500 1450 50  0001 C CNN
+	1    1500 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR?
+U 1 1 5E995CD6
+P 1500 3050
+F 0 "#PWR?" H 1500 2900 50  0001 C CNN
+F 1 "-BATT" H 1515 3223 50  0000 C CNN
+F 2 "" H 1500 3050 50  0001 C CNN
+F 3 "" H 1500 3050 50  0001 C CNN
+	1    1500 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 1450 1500 1500
+Wire Wire Line
+	1500 1500 3500 1500
+Wire Wire Line
+	3500 1500 3500 1550
+Wire Wire Line
+	3500 3050 3500 3100
+Wire Wire Line
+	3500 3100 1500 3100
+Wire Wire Line
+	1500 3100 1500 3050
+$Comp
+L MOVETON-rescue:R-Device R?
+U 1 1 5E98D27E
+P 5650 2150
+F 0 "R?" H 5720 2196 50  0000 L CNN
+F 1 "1.3k" H 5720 2105 50  0000 L CNN
+F 2 "" V 5580 2150 50  0001 C CNN
+F 3 "~" H 5650 2150 50  0001 C CNN
+	1    5650 2150
+	0    -1   1    0   
+$EndComp
+$Comp
+L MOVETON-rescue:R-Device R?
+U 1 1 5E99D3F9
+P 6050 1700
+F 0 "R?" H 6120 1746 50  0000 L CNN
+F 1 "250k" H 6120 1655 50  0000 L CNN
+F 2 "" V 5980 1700 50  0001 C CNN
+F 3 "~" H 6050 1700 50  0001 C CNN
+	1    6050 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOVETON-rescue:R-Device R?
+U 1 1 5E9A66D3
+P 6050 2100
+F 0 "R?" H 6120 2146 50  0000 L CNN
+F 1 "100k" H 6120 2055 50  0000 L CNN
+F 2 "" V 5980 2100 50  0001 C CNN
+F 3 "~" H 6050 2100 50  0001 C CNN
+	1    6050 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 1500 6050 1550
+Wire Wire Line
+	6050 1850 6050 1900
+Wire Wire Line
+	3500 1500 5000 1500
+Connection ~ 3500 1500
+Wire Wire Line
+	3500 3100 6050 3100
+Wire Wire Line
+	6050 3100 6050 2250
+Connection ~ 3500 3100
+Wire Wire Line
+	6050 1500 7000 1500
+Connection ~ 6050 1500
+Wire Wire Line
+	6050 3100 7000 3100
+Connection ~ 6050 3100
+Wire Wire Line
+	6050 1900 5950 1900
+Wire Wire Line
+	5950 1900 5950 1000
+Wire Wire Line
+	5950 1000 2800 1000
+Wire Wire Line
+	2800 1000 2800 2150
+Wire Wire Line
+	2800 2150 2900 2150
+Connection ~ 6050 1900
+Wire Wire Line
+	6050 1900 6050 1950
+$Comp
+L MOVETON-rescue:R-Device R?
+U 1 1 5E98A2E1
+P 4600 2650
+F 0 "R?" H 4670 2696 50  0000 L CNN
+F 1 "1k" H 4670 2605 50  0000 L CNN
+F 2 "" V 4530 2650 50  0001 C CNN
+F 3 "~" H 4600 2650 50  0001 C CNN
+	1    4600 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOVETON-rescue:R-Device R?
+U 1 1 5E98AF21
+P 4900 2650
+F 0 "R?" H 4970 2696 50  0000 L CNN
+F 1 "1k" H 4970 2605 50  0000 L CNN
+F 2 "" V 4830 2650 50  0001 C CNN
+F 3 "~" H 4900 2650 50  0001 C CNN
+	1    4900 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOVETON-rescue:R-Device R?
+U 1 1 5E98B133
+P 5200 2650
+F 0 "R?" H 5270 2696 50  0000 L CNN
+F 1 "1k" H 5270 2605 50  0000 L CNN
+F 2 "" V 5130 2650 50  0001 C CNN
+F 3 "~" H 5200 2650 50  0001 C CNN
+	1    5200 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOVETON-rescue:R-Device R?
+U 1 1 5E989360
+P 5650 2450
+F 0 "R?" H 5720 2496 50  0000 L CNN
+F 1 "137" H 5720 2405 50  0000 L CNN
+F 2 "" V 5580 2450 50  0001 C CNN
+F 3 "~" H 5650 2450 50  0001 C CNN
+	1    5650 2450
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5500 2450 5450 2450
+Wire Wire Line
+	5450 2450 5450 2150
+Wire Wire Line
+	5800 2450 5850 2450
+Wire Wire Line
+	5850 2450 5850 2150
+Connection ~ 5850 2150
+$EndSCHEMATC
